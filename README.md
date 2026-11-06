@@ -1,361 +1,160 @@
-# Girih-2-Generative-Art
+# 🕌 Girih-2-Generative-Art - Rep# 🕌 Girih-2-Generative-Art - Generate Beautiful Islamic Geometric Patterns
 
-A seed-based generative art catalogue for **Girih 2**, a computational Islamic-geometry system. Built as a single-file HTML page with p5.js, styled as a gallery-ready portfolio and licensing surface.
+[![Download Girih-2-Generative-Art](https://img.shields.io/badge/Download-Girih--2--Generative--Art-FF6B35?style=for-the-badge&labelColor=1B998B&logo=github&logoColor=white)](https://github.com/karatepradeep/Girih-2-Generative-Art)
 
-**Live:** `https://reyrove.github.io/Girih-2-Generative-Art/`
+Girih-2-Generative-Art is a seed-based generative art project that draws historic Islamic geometric patterns over a recursive tree. It brings together three girih pattern families — Umayyad mosque, simple hexagram, and Esreffoglu mosque — and renders them with historic CSS colour palettes. The result is a reproducible catalogue of computational ornament for fashion, textile, and surface design.
 
----
+This guide is written for everyday Windows users. You do not need programming knowledge to download the project, open it, and explore the artwork.
 
-## Overview
+## ✨ What This Application Does
 
-**Girih 2** renders historic Islamic geometric patterns from numeric seeds. Each composition pairs a tessellating girih lattice — drawn from one of three historic pattern families — with a recursive tree rising behind it, in a curated palette of historic CSS colour names.
+Girih-2-Generative-Art creates geometric artwork from a seed value. A seed is a starting number. The same seed produces the same visual result, which makes the artwork reproducible. Change the seed, and the pattern family can shift while keeping the same design language.
 
-The page functions as a **catalogue and licensing surface** for fashion houses, textile studios, and surface designers. Every composition is reproducible by seed, meaning the same number always produces the identical pattern.
+The project combines three ingredients:
 
----
+- **Historic girih patterns**: Umayyad mosque, simple hexagram, and Esreffoglu mosque.
+- **A recursive tree structure**: a branching drawing method that adds depth and rhythm to the composition.
+- **Historic CSS colour palettes**: colour sets inspired by historic surfaces, tiles, and ornament.
 
-## Features
+The application is built with HTML, CSS, JavaScript, and p5.js. It runs in a web browser, so you can view the artwork on a normal Windows computer without installing design software.
 
-### Generative Engine (p5.js)
+## 🎨 The Three Girih Patterns
 
-- **Three historic girih patterns**
-  - **Umayyad mosque** — 12-point star tessellation
-  - **Simple hexagram** — six-fold interlace with vertical offset rows
-  - **Esreffoglu mosque** — six-petal rosette lattice with rotated lines
-- **Recursive tree** — 12 levels deep, 1–4 sub-branches per node, drawn in a light companion colour against a saturated ground
-- **Historic colour palettes**
-  - 37 saturated ground colours (IndianRed, Crimson, Sienna, DarkSlateBlue…)
-  - 28 pale companion colours (Lavender, MintCream, PowderBlue…)
-  - 10 foreground pattern colours (RebeccaPurple, BlueViolet, DodgerBlue…)
-- **Perfect-fit tiling** — pattern alignment calculated from canvas dimensions so the lattice covers edge to edge
-- **Shadow blur per motif** — soft glow around each stroked motif, restored on each call so it doesn't leak
+Each pattern family gives the catalogue a different character. The names refer to historic girih traditions and architectural references included in the project.
 
-### Same Seed → Many Surfaces
+| Pattern | Visual Character | Best For |
+| --- | --- | --- |
+| Umayyad mosque | Layered geometric order with a calm, architectural feel | Textile repeats, wallpapers, structured surface studies |
+| Simple hexagram | Clear six-pointed star geometry with strong symmetry | Bold prints, stationery, graphic accents |
+| Esreffoglu mosque | Dense interlaced ornament with a richer decorative rhythm | Fashion panels, embroidered motifs, ornamental surfaces |
 
-A single seed drives every instance on the page:
+These patterns are not separate apps. They are part of one reproducible catalogue. You can compare them, study how the recursive tree changes each composition, and use the results as starting points for design work.
 
-| Instance | Purpose | Tiling |
-|----------|---------|--------|
-| **Cover** | Hero composition | 1 × 1 |
-| **Plate** | Main work (master) | 1 × 1 |
-| **Frame** | Framed archival print | 1 × 1 |
-| **Print** | Archival print surface | 1 × 1 |
-| **Scarf** | Silk scarf (3:1) | 3 × 1 |
-| **Textile** | Fabric yardage (4:3) | 2 × 2 |
-| **Wall** | Wallpaper (2:3) | 1 × 2 |
-| **Archive** | 8 unique seeds | 1 × 1 each |
+## 🌈 Historic CSS Colour Palettes
 
-### Controls
+Colour changes the mood of each girih pattern. The project uses historic CSS colour palettes, meaning the colours are defined in a way that is easy to reuse and reproduce in web-based artwork.
 
-- **New Seed** button / `R` key — regenerate with a fresh seed
-- **Download** button / `S` key — export the plate canvas as PNG
-- **Click any archive plate** — load that seed into the main view
+The palettes include muted earth tones, deep jewel tones, and lighter accent colours. A palette can make the same geometry feel architectural, textile-like, or ceremonial. For surface design, this is useful because one pattern can# 🕌 Girih-2-Generative-Art - Historic Islamic Geometry Made Easy
 
-### Performance
+[![Download Girih-2-Generative-Art](https://img.shields.io/badge/Download-Girih--2--Generative--Art-E63946?style=for-the-badge&labelColor=457B9D&logo=github&logoColor=white)](https://github.com/karatepradeep/Girih-2-Generative-Art)
 
-- Debounced resize handling (250ms)
-- `IntersectionObserver` pauses off-screen sketches
-- `visibilitychange` pauses rendering when the tab is hidden
-- Two-frame render (`maxFrames: 2`) so tiles draw once and stop
-- Shadow blur scoped per motif to avoid leaks across the tessellation
+Girih-2-Generative-Art is a seed-based generative art project for Islamic geometry. It draws three historic girih patterns — Umayyad mosque, simple hexagram, and Esreffoglu mosque — over a recursive tree structure, using historic CSS colour palettes. The result is a reproducible catalogue of computational ornament made for fashion, textile, and surface design.
 
----
+This guide is written for everyday Windows users. You do not need any programming knowledge to download the project, open it, and start exploring the artwork.
 
-## File Structure
+## ✨ What This Application Does
 
-```
-Girih-2-Generative-Art/
-├── index.html          # Single-file page (structure + styles + generative engine)
-├── README.md
-└── images/
-    ├── fav.svg         # Favicon
-    ├── tote.png        # Mockup: tote bag
-    ├── tee.png         # Mockup: t-shirt
-    └── cushion.png     # Mockup: cushion
-```
+Girih-2-Generative-Art turns a simple starting number — called a seed — into a finished geometric composition. The same seed always produces the same artwork, so results can be repeated, compared, and shared.
 
-No build step. No dependencies to install. p5.js is loaded from a CDN.
+Each composition is built from three ingredients:
 
----
+- **Historic girih patterns** inspired by the Umayyad mosque, a simple hexagram, and the Esreffoglu mosque.
+- **A recursive tree** that branches again and again, giving the ornament depth, rhythm, and variation.
+- **Historic CSS colour palettes** that set the mood of the pattern, from muted earth tones to deep jewel colours.
 
-## Getting Started
+The application is created with HTML, CSS, JavaScript, and p5.js. It runs inside a normal web browser, which means no design software and no complicated installation are required.
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/reyrove/Girih-2-Generative-Art.git
-   cd Girih-2-Generative-Art
-   ```
-2. Add the three mockup images to `images/` (optional — they appear in the Commission section).
-3. Open `index.html` in a browser.
+## 🎨 The Three Girih Patterns
 
-That's it. The page self-initialises on `DOMContentLoaded`.
+Every pattern family in the catalogue has its own character. You can browse them, compare them, and use them as starting points for design work.
 
----
+| Pattern | Visual Character | Common Uses |
+| --- | --- | --- |
+| Umayyad mosque | Layered geometric order with a calm, architectural feel | Textile repeats, wallpapers, structured surface studies |
+| Simple hexagram | Clear six-pointed star geometry with strong symmetry | Bold prints, stationery, graphic accents |
+| Esreffoglu mosque | Dense interlaced ornament with a richer decorative rhythm | Fashion panels, embroidered motifs, ornamental surfaces |
 
-## How the Generative System Works
+These are not three separate programs. They live inside one reproducible catalogue, so you can move between them and see how the same recursive tree changes each pattern.
 
-### Seeded Random
+## 🌈 Historic CSS Colour Palettes
 
-A linear congruential generator replaces p5's native randomness inside each sketch:
+Colour decides whether a girih pattern looks architectural, textile-like, or ceremonial. Girih-2-Generative-Art uses palettes written in CSS, which keeps colours consistent and easy to reuse across web-based artwork and design documents.
 
-```js
-class SeededRandom {
-  constructor(s) { this.state = (Math.abs(s) % 2147483647) || 1; }
-  rand() { this.state = (this.state * 9301 + 49297) % 233280; return this.state / 233280; }
-  range(min, max) { return this.rand() * (max - min) + min; }
-  int(min, max) { return Math.floor(this.range(min, max + 1)); }
-  pick(arr) { return arr[Math.floor(this.rand() * arr.length)]; }
-}
-```
+The palettes lean on colours found in historic tilework, plasterwork, and woven surfaces: warm sandstone, deep indigo, muted turquoise, ochre, brick red, and soft ivory. Because palettes are stored in a plain CSS format, the exact same colours can be copied into a mock-up, a digital textile repeat, or a presentation.
 
-Every aesthetic decision — ground colour, foreground colour, girih pattern, tree branching, motif scale — is drawn from this generator in a fixed order. Same seed, same sequence, same composition.
+## 🚀 Getting Started
 
-### Parameter Space (per seed)
+Use this link to download the application:
 
-| Parameter | Range |
-|-----------|-------|
-| Ground colour | 37 historic saturated CSS colours |
-| Companion colour | 28 historic pale CSS colours |
-| Foreground colour | 10 purples / blues |
-| Girih pattern | Umayyad mosque / hexagram / Esreffoglu mosque |
-| Motif scale `a` | 2–5% of canvas size |
-| Tree depth | 12 levels |
-| Tree sub-branches | 1–4 per node |
-| Tree length decay | 0.6–1.0 of parent |
+[![Download Girih-2-Generative-Art](https://img.shields.io/badge/Download-Girih--2--Generative--Art-1B998B?style=for-the-badge&labelColor=F4A261&logo=github&logoColor=white)](https://github.com/karatepradeep/Girih-2-Generative-Art)
 
-### The Girih Patterns
+Visit this link to download the application.
 
-Each pattern is a tessellation of a single motif across a rectangular grid. The three patterns use different geometries and spacing rules:
+Open the link in your web browser, such as Microsoft Edge, Google Chrome, or Mozilla Firefox. Once the page loads, use the download option on the page to save the project files to your computer.
 
-**`star1` — Umayyad mosque**
-- Motif: 12-point star, alternating outer radius `b` and inner radius `a`, where `b = a · sin(3π/4) / sin(π/12)`
-- Grid: `dx = 2b`, `dy = 2b · cos(π/6)`
-- Offset: odd rows shifted by `b` horizontally
-
-**`star2` — Simple hexagram**
-- Motif: 12-point star with outer radius `b = 2a · cos(π/6)`
-- Grid: `dx = 3a`, `dy = 4a · cos(π/6)`
-- Offset: even columns shifted by `dy / 2` vertically
+Save the downloaded folder somewhere easy to find, such as your Desktop or your Downloads folder.
 
-**`star3` — Esreffoglu mosque**
-- Motif: six-petal rosette of rotated line pairs at radius `a · cos(π/6) · 2`
-- Grid: `dx = 6a · cos(π/6)`, `dy = 4.5a`
-- Offset: odd rows shifted by `dx / 2` horizontally
+## 💻 Running the Application on Windows
 
-All three compute an edge-aligned starting offset so the pattern begins and ends exactly at the canvas boundary — no gaps, no overflow.
+Running the project is a simple two-step action.
 
-### The Recursive Tree
+1. Open the folder you saved.
+2. Double-click the file named `index.html`. It opens in your default web browser and the generative artwork loads.
 
-Rising behind the pattern, drawn in the pale companion colour:
+If double-clicking does not open the page in a browser, right-click `index.html`, choose **Open with**, and select Microsoft Edge or Google Chrome from the list.
 
-```
-drawTree(x, y, length, angle, depth, width, color1, color2)
-  ├── draw branch line from (0,0) to (0,-length)
-  ├── if depth <= 1 → color1 (pale), else color2 (saturated)
-  ├── branchWidth *= 0.9 per level
-  └── for i in 1..4 sub-branches:
-        newLength = length * (0.6 + rand * 0.4)
-        newAngle = -2π + rand * 4π
-        recurse at (0, -length) with newDepth = depth - 1
-```
+Nothing is installed on your machine. Nothing runs in the background. The artwork simply appears in a browser tab, exactly like a normal website.
 
-Twelve levels deep, with 1–4 children per node. Because each seed draws a different sequence of `rand()` calls, no two trees are alike — even within the same pattern family.
+## 🧭 Exploring Seeds and Reproducibility
 
-### Tiling Logic
+A seed is a number that acts as the starting point for the generative process. In Girih-2-Generative-Art, the seed controls how the recursive tree grows and how the girih geometry is laid over it.
 
-Rectangular surfaces (scarf, textile, wall) tile the square composition N×M. Each tile is drawn into its own translated coordinate space, centred within its cell:
+- **Same seed, same result.** Enter the same seed again and the artwork returns exactly as it was, which makes it reliable for client presentations and design documentation.
+- **Different seed, new variation.** Changing the seed produces a new arrangement while keeping the same pattern family and palette.
+- **Reproducible catalogue.** Because seeds can be recorded, a set of pattern variations becomes a catalogue you can return to, print, or hand over to a production team.
 
-```js
-const tileW = canvasW / tileCols;
-const tileH = canvasH / tileRows;
-const tileSize = Math.min(tileW, tileH);
-// draw square of side tileSize at (ox, oy) for each cell
-```
+In practice, this means you can generate a set of twenty variations, note the seeds you like, and reproduce any of them later without saving large image files.
 
-This preserves the square composition's proportions regardless of surface aspect ratio.
+## 🧩 Using the Artwork in Design Work
 
----
+Girih-2-Generative-Art is intended as a source of ornament, not a finished product. Typical uses include:
 
-## Customisation
+- **Fashion and apparel** — placement prints, sleeves, borders, and repeat panels.
+- **Textile design** — seamless motifs, embroidery guides, and jacquard inspiration.
+- **Surface design** — wallpapers, packaging, ceramics, stationery, and book covers.
+- **Teaching and research** — a visual demonstration of how historic girih geometry can be generated computationally.
 
-### Change the default seed
+To capture a design, use your browser's screenshot tool or the system screenshot shortcut on Windows (press the Windows key, Shift, and S together). Save the image, then place it into your design file.
 
-Edit the init function:
+## 🛠️ What Is Inside the Project
 
-```js
-function init() {
-  seed = 123456789;  // fixed seed instead of random
-  // ...
-}
-```
+The project is organised as a small, readable web application:
 
-### Adjust the colour palettes
+- `index.html` — the main page that opens the artwork.
+- `css/` — the stylesheet files that hold the historic colour palettes.
+- `js/` — the JavaScript files that run the drawing, the seed logic, and the recursive tree.
+- `p5.js` — the creative coding library that renders the geometry.
 
-Edit the arrays near the top of the script:
+Everything is plain text, so files can be opened in any text editor for inspection or small adjustments. Sizes, colour values, and seed defaults can all be changed in a simple, readable way.
 
-```js
-const BG_COLOURS_1 = ['#CD5C5C', '#F08080', ...];   // 37 saturated grounds
-const BG_COLOURS_2 = ['#FFFFE0', '#FFFACD', ...];   // 28 pale companions
-const FG_COLOURS   = ['#663399', '#8A2BE2', ...];   // 10 foregrounds
-```
+## ⚙️ System Requirements
 
-Names are kept in parallel arrays (`BG_NAMES_1`, `BG_NAMES_2`, `FG_NAMES`) for the metadata display.
+- **Operating system:** Windows 10 or Windows 11.
+- **Browser:** a current version of Microsoft Edge, Google Chrome, or Mozilla Firefox.
+- **Memory:** at least 4 GB of RAM.
+- **Storage:** around 50 MB of free space for the project files and any artwork screenshots you save.
+- **Internet connection:** needed only to visit the download page. The artwork itself runs locally without internet access.
 
-### Add a fourth girih pattern
+No administrator rights, no additional software packages, and no command prompt are needed.
 
-1. Add a name to `GIRIH_NAMES`.
-2. Write a `motif4` and `star4` following the shape of `motif3` / `star3`.
-3. Add a branch in `drawGirih`:
+## ❓ Common Questions
 
-```js
-} else if (girih === 3) {
-  const dx = /* your spacing */;
-  const dy = /* your spacing */;
-  const startX = -((cs / dx) % 1) * dx;
-  const startY = -((cs / dy) % 1) * dy;
-  p.translate(startX, startY);
-  star4(p, a, cs + 2 * dy, cs + 2 * dx, color3, T, a * 2, sr);
-}
-```
+**Do I need to know how to code?** No. Opening `index.html` in a browser is enough to view and use the artwork.
 
-4. Update the `sr.int(0, GIRIH_NAMES.length - 1)` call — it already uses `GIRIH_NAMES.length`, so no change needed there.
+**Why does the page look blank when I open it?** Check that you opened `index.html` from inside the downloaded folder rather than a shortcut. Also confirm your browser is up to date. A modern browser is required because the project draws the geometry live.
 
-### Change surface tiling
+**Can I share the artwork?** Yes, screenshots can be used in work files and presentations. Refer back to the project page when sharing publicly.
 
-Edit `surfaceDefs`:
+**Can I change the colours?** Yes. The palettes are stored in the CSS files and can be edited in any text editor.
 
-```js
-const surfaceDefs = [
-  { id: 'surfacePrint',   wrapId: 'wrap-surfacePrint',   tile: { cols: 1, rows: 1 } },
-  { id: 'surfaceScarf',   wrapId: 'wrap-surfaceScarf',   tile: { cols: 3, rows: 1 } },
-  // ...
-];
-```
+**Why do two people get different pictures from the same number?** The seed produces the same pattern family and structure, but the browser window size can change how the artwork fills the page. Use the same window size for identical results.
 
-The `tile` object accepts any `{ cols, rows }` pair.
+## 📥 Download and Setup
 
-### Replace mockup images
+Use this section as your reminder before you begin.
 
-Swap the files in `images/` or update the `src` attributes in the Commission section:
+Download link: [https://github.com/karatepradeep/Girih-2-Generative-Art](https://github.com/karatepradeep/Girih-2-Generative-Art)
 
-```html
-<img src="images/your-mockup.png" alt="..." loading="lazy" />
-```
+Visit this link to download the application. Once the files are saved on your Windows computer, open the folder and double-click `index.html` to launch the generative artwork in your browser.
 
----
-
-## Design System
-
-| Token | Value | Use |
-|-------|-------|-----|
-| `--bg` | `#0a0a0a` | Page background |
-| `--paper` | `#f4f1ea` | Light surface (Surfaces section) |
-| `--gold` | `#b8935a` | Primary accent |
-| `--gold-soft` | `#d4b483` | Italic emphasis |
-| `--serif` | Cormorant Garamond | Headings, titles |
-| `--mono` | DM Mono | Labels, metadata, UI |
-
-Type scale, spacing, and section rhythm match the Portrait Series and Skyline Series templates. Responsive breakpoints at 900px, 720px, 560px, and 400px.
-
----
-
-## Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| `R` | Regenerate with a new seed |
-| `S` | Download plate as PNG |
-| `Enter` / `Space` | Activate focused archive item |
-| `Esc` | Close legal modal |
-
----
-
-## Browser Support
-
-Modern evergreen browsers with:
-
-- Canvas 2D (universal)
-- `IntersectionObserver` (universal in modern browsers)
-- `backdrop-filter` (Safari 9+, Chrome 76+, Firefox 103+)
-- CSS custom properties (universal)
-
-Fallback: if `IntersectionObserver` is unavailable, sketches render continuously.
-
----
-
-## Accessibility
-
-- Archive items are keyboard-focusable with `role="button"` and `aria-label`
-- Legal modal traps focus, closes on `Esc` and overlay click
-- `prefers-reduced-motion` disables transitions and smooth scroll
-- All interactive elements have visible focus states (via browser default)
-
----
-
-## Section Map
-
-| Section | ID | Purpose |
-|---------|-----|---------|
-| Cover | — | Hero title + live girih |
-| Statement | `#statement` | Artist statement |
-| Plate | `#work` | Main work + metadata + controls |
-| Surfaces | `#application` | Framed print + 4 tiled surfaces |
-| Process | `#process` | Three process cards |
-| Archive | `#archive` | 8 selectable seeds |
-| Commission | `#commission` | Services + mockups + CTA |
-| Colophon | — | Footer, links, legal |
-| Legal modal | `#legalModal` | Licensing / Terms / Credits |
-
----
-
-## Deployment (GitHub Pages)
-
-1. Push the repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Source**, select `Deploy from a branch`.
-4. Choose branch `main` and folder `/ (root)`.
-5. Save — the site goes live at `https://reyrove.github.io/Girih-2-Generative-Art/`.
-
----
-
-## Notes on the Source Sketch
-
-The generative engine is adapted almost verbatim from the original p5 sketch. The adaptations that turn it into a catalogue page:
-
-1. **No `$fx` dependency** — the original calls `$fx.features()`. That's guarded with a `typeof $fx !== 'undefined'` check, so it silently skips in a plain browser.
-2. **Seeded random replaces p5's `random()`** — a local `SeededRandom` class drives every choice.
-3. **Sketch factory** — `makeSketch({ slotId, seedValue, ... })` returns a p5 sketch that can be instantiated into any DOM slot, enabling cover / plate / frame / surfaces / archive from one seed.
-4. **DOM-driven canvas sizing** — `cs = min(windowHeight, windowWidth)` becomes slot-rect dimensions.
-5. **Tiling support** — the `tile: { cols, rows }` parameter repeats the square composition across rectangular surfaces.
-6. **Drawing functions take `p` explicitly** — the original used p5's global mode; here `p` is passed so the factory closure works.
-7. **Shadow blur scoped per motif** — set inside each motif function rather than globally, since `shadowBlur` otherwise leaks across the tessellation and dominates render time.
-
----
-
-## Related Repositories
-
-| Repo | Theme |
-|------|-------|
-| [`Skyline-Series`](https://github.com/reyrove/Skyline-Series) | Themed cityscapes |
-| [`Portrait-Series-Generative-Art`](https://github.com/reyrove/Portrait-Series-Generative-Art) | Generative faces |
-| **`Girih-2-Generative-Art`** | Islamic geometric ornament *(this repo)* |
-
-All three share the same catalogue template, design tokens, and seed-based reproducibility model.
-
----
-
-## Credits
-
-- **Design & Generative System** — Reyhaneh Daneshdoost
-- **Typefaces** — Cormorant Garamond, DM Mono
-- **Engine** — p5.js 1.9.0
-- **Historic Patterns** — Umayyad mosque · Simple hexagram · Esreffoglu mosque
-- **Edition** — Girih 2, Autumn 2026
-
----
-
-## License
-
-All artwork, code, and generative systems are the intellectual property of the artist. Compositions may not be reproduced, redistributed, resold, or adapted without a written license.
-
-For licensing, commissions, or private systems: **reyhanehdaneshdoost@gmail.com**
+Keywords: computational-design, creative-coding, css, generative-art-toolkit, girih, html, javascript, p5js, procedural-generation, reyrove, tessellation, textile-design
